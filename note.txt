@@ -81,3 +81,12 @@ It ensures it will definately work on the specified browsers
 
 
 This was all going behind create react app
+
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+
+Now we dont need to write npm parcel index.html everytime instead just write npm run start (or just npm start)
+and for production app write npm run build (it wo't work for "npm build" in this case we have to include run)
