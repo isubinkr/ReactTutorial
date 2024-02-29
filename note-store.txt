@@ -1,0 +1,42 @@
+<div className="res-card" style={{backgroundColor: "#f0f0f0"}}> 
+This is how we give inline css to JSX
+
+const styleCard = {
+  backgroundColor: "#f0f0f0",
+}
+
+or we can just make style={styleCard}
+
+<RestaurantCard resName="Meghna Foods" cuisine="Biryani, North Indian, Asian"/> this is called passing props to the component
+
+props are object
+
+const RestaurantCard = (props) => {
+  return (
+    <div className="res-card" style={styleCard}>
+    .......
+      <h3>{props.resName}</h3>
+      <h4>{props.cuisine}</h4>
+      <h4>4.4 stars</h4>
+      <h4>38 minutes</h4>
+    </div>
+  )
+};
+
+const RestaurantCard = ({resName, cuisine}) => {...} --> destructuring on the fly
+
+config driven ui
+
+https://github.com/namastedev/namaste-react
+
+const RestaurantCard = (props) => {
+  const { resData } = props;
+
+  const {cloudinaryImageId, name, avgRating, cuisines, costForTwo, deliveryTime,} = resData?.data;
+}
+
+        <RestaurantCard resData={resList[0]} />
+
+        {resList.map((restaurant) => (<RestaurantCard key={restaurant.data.id} resData={restaurant} />))}
+
+not using keys (not acceptable) <<< index as key <<<<<< unique id (best practise)
