@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import { REST_API } from "../utils/constants";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
     // Local State variable - super powerful variable
@@ -32,6 +33,10 @@ const Body = () => {
     //     return <Shimmer />;
     // }
     //  same using ternary operator is used below
+
+    const onlineStatus = useOnlineStatus();
+
+    if(!onlineStatus) return <h1>Looks like you're offline!! Please check yout internnet connection;</h1>
 
     return listOfRestaurants.length === 0 ? <Shimmer /> : (
         <div className="body">
