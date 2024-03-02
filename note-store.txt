@@ -60,3 +60,7 @@ this is how we export two components from a single file (also called named impor
     import { LOGO_URL } from "../utils/constants";
 
   # Reconciliation Algorithm (React Fiber)
+
+  # Optional chaining -- json?.data?.cards[1]?.card?.....
+
+  # whenever the state variable changes react triggers a reconciliation cycle (re-renders the component)
