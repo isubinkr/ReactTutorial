@@ -32,3 +32,7 @@ Footer
 
   export const Component;   // include export before defining any component like export cost Header =...
   import {Component} from "path";
+
+  # CORS issue
+  - using allow CORS extension
+  - or just use corsproxy.io - you just have to include a url before the api url

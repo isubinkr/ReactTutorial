@@ -64,3 +64,19 @@ this is how we export two components from a single file (also called named impor
   # Optional chaining -- json?.data?.cards[1]?.card?.....
 
   # whenever the state variable changes react triggers a reconciliation cycle (re-renders the component)
+
+
+  # 
+  // If no dependency array -> useEffect is called on every render
+  // If dependecy array is empty = [] -> useEffect is called on initial render and just once
+  // If dependency array is [btmNameReact] -> called everytime btnNameReact is updated
+
+  useEffect(() => {
+    console.log("Use effect called")
+  }, [btmNameReact]);
+
+
+  use rafce (code snipper by react+ extension to create a component)
+
+             <h1>{resInfo?.cards[0]?.card?.card?.info?.name}</h1>
+            <h3>{resInfo?.cards[0]?.card?.card?.info?.cuisines.join(", ")} - {resInfo?.cards[0]?.card?.card?.info?.costForTwoMessage}</h3>
