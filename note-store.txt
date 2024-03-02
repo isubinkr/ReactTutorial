@@ -78,5 +78,6 @@ this is how we export two components from a single file (also called named impor
 
   use rafce (code snipper by react+ extension to create a component)
 
-             <h1>{resInfo?.cards[0]?.card?.card?.info?.name}</h1>
-            <h3>{resInfo?.cards[0]?.card?.card?.info?.cuisines.join(", ")} - {resInfo?.cards[0]?.card?.card?.info?.costForTwoMessage}</h3>
+Class Based Coponent and Functional Componenet -> view code of About US Section
+
+// Learn about mounting and unmounting in useEffect -> using return () => {};
