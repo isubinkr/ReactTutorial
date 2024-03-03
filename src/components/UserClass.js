@@ -66,7 +66,7 @@ class UserClass extends React.Component {
                     })
                     // Same as functional comp. whenever we change the value of state var react rerenders the component
                 }}>Count Increase</button> */}
-                <img src={avatar_url} />
+                <img className="w-[200px]"src={avatar_url} />
                 <h2>Name: {name}</h2>
                 <h3>Location: {location}</h3>
                 <h4>Contact: @isubinkr</h4>

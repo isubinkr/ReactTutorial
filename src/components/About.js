@@ -20,7 +20,7 @@ class About extends React.Component {
         // console.log("Parent Render called");
         return (
             <div>
-                <h1>About</h1>
+                <h1 className="font-bold text-4xl">About</h1>
                 <h2>This is React Tutorial</h2>
                 <UserClass name={"Subin Kumar (class)"} location={"Ranchi"} />
                 {/* <UserClass name={"Elon Musk (class)"} location={"US"} /> */}

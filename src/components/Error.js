@@ -5,7 +5,7 @@ const Error = () => {
     // console.log(err);
     return (
         <div>
-            <h1>Oops!!!</h1>
+            <h1 className="text-4xl">Oops!!!</h1>
             <h2>Something went wrong!!</h2>
             <h3>{err.statusText}</h3>
         </div>

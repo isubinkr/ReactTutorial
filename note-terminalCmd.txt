@@ -1,0 +1,39 @@
+create a folder
+
+make sure the directory is set to that folder in terminal 
+
+#1 - To configure npm into our project
+     % npm init
+(or) % npm init -y   // This skips a lot of steps
+
+    This will ask a few things like package name, version, entry point, test command,...
+    in test command coloumn write jest
+
+#2 - installing bundler (parcel)
+     % npm install -D parcel
+
+     // -D beacuse we install bunder as devDependencies
+     // We don't use -D in case or react/.... because we install them as normal dependencies
+
+#3 - installing react & react-dom
+     % npm install react
+     % npm install react-dom    // we can use "i" only in place of "install"
+
+     <script type="module" src="./src/App.js"></script>  // Make sure to include module type
+
+#4 - creating shortcut for npx run index.html
+    "scripts": {
+        "start": "parcel index.html",
+        "build": "parcel build index.html",
+        "test": "jest"
+    },
+     // Add this into package.json (otherwise we will always have to write "npx parcel index.html" everytime to run our build "npx parcel buuild index.html" for production app)
+     // Now we can use npm run start/ npm start for dev build
+     // and "npm run build" for production app (npm build -> won't work)
+
+#5 - installing react-router-dom
+      % npm i react-router-dom
+      // to use routing
+
+#6 - installing tailwindcss 
+      follow tailwindcss website

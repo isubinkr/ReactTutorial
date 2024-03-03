@@ -28,17 +28,17 @@ Node modules is the collection of dependencies.
 
 We don't need to push the node_modules folder on git instead just push package.json & package-lock.json
 Cause these two files contain the version of each dependencies so we can reinstall the dependecies.
-Any code that is automatically genrated (dist, .parcel-cache, etc) we dont need to put that on github
+Any code that is automatically generated (dist, .parcel-cache, etc) we dont need to put that on github
 
 You can try it like remove the node_modules folder and then again hit npm install in terminal node_modules will automatically get downloaded again.
 
 
-last time we used cdn to fetch the react package but that is not a good practice insetead we will install react package on our local machine
+last time we used cdn to fetch the react package but that is not a good practice instead we will install react package on our local machine
 
     npm install react
     npm install react-dom / npm i react-dom
 
-now we have to import these to our javascript file by writing imprt React from "react";
+now we have to import these to our javascript file by writing import React from "react";
 If we run our app after this it will throw an error sice import isn't even in the syntax of normal
 javascript that is why we need to specify module type in script tag to make this work.
 
