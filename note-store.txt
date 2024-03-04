@@ -83,6 +83,16 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 see the changes in App.js After Episode-07;
 
-Class Based Coponent and Functional Componenet -> view code of About US Section
+Class Based Coponent and Functional Component -> view code of About US Section
 
 // Learn about mounting and unmounting in useEffect -> using return () => {};
+
+Accordion body 
+
+Control Component & Uncuntrolled Component
+  - lifting the state up
+  - https://react.dev/learn/sharing-state-between-components#lifting-state-up-by-example
+  - Advance concept
+
+props drilling  -> many sol -> react context
+how to use usercontext in functional component and class component (About Us page)
