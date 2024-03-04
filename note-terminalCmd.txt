@@ -37,3 +37,7 @@ make sure the directory is set to that folder in terminal
 
 #6 - installing tailwindcss 
       follow tailwindcss website
+
+#7 - installling @reduxjs/toolkit and react-redux
+      npm install @reduxjs/toolkit
+      npm i react-redux

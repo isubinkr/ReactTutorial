@@ -96,3 +96,6 @@ Control Component & Uncuntrolled Component
 
 props drilling  -> many sol -> react context
 how to use usercontext in functional component and class component (About Us page)
+
+    onClick={() => handleAddItem(item)}
+    onClick={handleAddItem(item)} // we can't do this because we have to pass a callback fn to onClick
