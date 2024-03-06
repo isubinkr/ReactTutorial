@@ -1,0 +1,51 @@
+Types of testing (devloper)
+    Unit Testing
+    Integration Testing
+    End to End Testing - e2e testing
+
+Setting up Testing in our app
+    Install React Testing Library
+    Installed jest
+    Installed Babel dependencies
+    Configure Babel
+    Configure Parcel Config file to disable default babel transpilation
+    Jest - npx jest --init
+    Install jsdom library
+    Install @babel/preset-react - to make JSX work in test cases
+    Include @babel/preset-react inside my babel config
+    npm i -D @testing-library/jest-dom
+
+
+files under __tests__ folder (__...__ is called dunder) and files named as:
+    Headers.test.js
+    anything.test.ts
+    anything.spec.js
+    anyhing.spec.ts
+are considered as test files
+
+sum.test.js
+    test("String", () => {
+        // callback function
+        const result = sum(3,4);
+    
+        // Assertion
+        expect(result).toBe(7);
+    })
+
+Add @babel/preset-react (https://github.com/babel/babel/tree/main/packages/babel-preset-react) to the 'presets' section of your Babel config to enable transformation.
+// This Error "Support for the experimental syntax 'jsx' isn't currently enabled (5:10):" is throwin
+to fix this
+    npm i -D @babel/preset-react
+
+
+
+Add the last line in package.json file for HMR like function for test
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest",
+    "watch-test": "jest --watch"
+  },
+
+
+You can see the coverage of your test cases in detail inside coverage/Icov-report/index.html file

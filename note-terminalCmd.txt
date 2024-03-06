@@ -3,21 +3,21 @@ create a folder
 make sure the directory is set to that folder in terminal 
 
 #1 - To configure npm into our project
-     % npm init
-(or) % npm init -y   // This skips a lot of steps
+       npm init
+(or)   npm init -y   // This skips a lot of steps
 
     This will ask a few things like package name, version, entry point, test command,...
     in test command coloumn write jest
 
 #2 - installing bundler (parcel)
-     % npm install -D parcel
+       npm install -D parcel
 
      // -D beacuse we install bunder as devDependencies
      // We don't use -D in case or react/.... because we install them as normal dependencies
 
 #3 - installing react & react-dom
-     % npm install react
-     % npm install react-dom    // we can use "i" only in place of "install"
+       npm install react
+       npm install react-dom    // we can use "i" only in place of "install"
 
      <script type="module" src="./src/App.js"></script>  // Make sure to include module type
 
@@ -32,12 +32,49 @@ make sure the directory is set to that folder in terminal
      // and "npm run build" for production app (npm build -> won't work)
 
 #5 - installing react-router-dom
-      % npm i react-router-dom
-      // to use routing
+       npm i react-router-dom
+       // to use routing
 
 #6 - installing tailwindcss 
-      follow tailwindcss website
+       follow tailwindcss website
 
-#7 - installling @reduxjs/toolkit and react-redux
-      npm install @reduxjs/toolkit
-      npm i react-redux
+#7 - installing @reduxjs/toolkit and react-redux
+       npm install @reduxjs/toolkit
+       npm i react-redux
+
+#8 - installing React Testing Library (uses jest(using babel))
+       npm i -D @testing-library/react
+       npm i -D jest
+       npm install --save-dev babel-jest @babel/core @babel/preset-env
+
+       // configure babel see the jest website (using babel section)
+       // since we were alredy using babel(with parcel) inside our project so now if we want to add 
+       // babel-jest so we will have to make some changes. // to disable default babel transpilation
+       // go to babel website -> search babel (javascript) -> usage with other tools section
+       // follow for there they will ask to create .parcelrc file and add some ...
+
+       npm run test
+       npx jest --init    // ( for jest configuration )
+            ✔ Would you like to use Typescript for the configuration file? … no
+            ✔ Choose the test environment that will be used for testing › jsdom (browser-like)
+            ✔ Do you want Jest to add coverage reports? … yes
+            ✔ Which provider should be used to instrument code for coverage? › babel
+            ✔ Automatically clear mock calls, instances, contexts and results before every test? … yes
+
+       // Go to React Testing Libraby website choose setup scroll down to jest28
+       npm install --save-dev jest-environment-jsdom
+       // use only the above command nothing else
+
+       npm i -D @babel/preset-react
+       // Install this library to enable 'jsx' support to our tests;
+       Add @babel/preset-react to the 'presets' section of your Babel config to enable transformation.
+       module.exports = {
+              presets: [
+              ["@babel/preset-env", { targets: { node: "current" } }],
+              ["@babel/preset-react", { runtime: "automatic" }],
+              ],
+       };
+
+       npm i -D @testing-library/jest-dom
+       // to add toBeInDocument
+

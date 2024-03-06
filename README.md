@@ -47,3 +47,9 @@ Footer
 - Slice (cartSlice)
 - Dispatch(action)
 - Selector
+
+# Tyepes of Testing (developer)
+
+- Unit Testing
+- Integration Testing
+- End to End Testing (e2e testing)
